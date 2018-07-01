@@ -1,0 +1,4 @@
+vendor/*
+.sparta/*
+graph.html
+resources/node_modules/*
