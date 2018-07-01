@@ -232,11 +232,6 @@ func New(connections *Connections, api *sparta.API) []*sparta.LambdaAWSInfo {
 	lambdaFunctions = append(lambdaFunctions, gws.newOnPutCallRekognition(api))
 	lambdaFunctions = append(lambdaFunctions, gws.newOnS3PutCallPolly(api))
 	lambdaFunctions = append(lambdaFunctions, gws.newOnS3PutGenerateSummary(api))
-
 	lambdaFunctions = append(lambdaFunctions, gws.newOnFeedbackDetectSentiment(api))
-
-	// Add a decorator to ensure that the bucket that we're using has the proper
-	// policy set so that the "summaries" are publicly available
-
 	return lambdaFunctions
 }
