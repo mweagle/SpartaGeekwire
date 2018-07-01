@@ -109,9 +109,8 @@ func main() {
 		Headers: map[string]interface{}{
 			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key",
 			"Access-Control-Allow-Methods": "*",
-			// "Access-Control-Allow-Origin": gocf.GetAtt(s3Site.CloudFormationS3ResourceName(),
-			// 	"WebsiteURL"),
-			"Access-Control-Allow-Origin": "*",
+			"Access-Control-Allow-Origin": gocf.GetAtt(s3Site.CloudFormationS3ResourceName(),
+				"WebsiteURL"),
 		},
 	}
 
