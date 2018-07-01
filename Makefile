@@ -1,5 +1,5 @@
 .DEFAULT_GOAL=provision
-.PHONY: build test get run tags
+.PHONY: build test get
 
 ensure_vendor:
 	mkdir -pv vendor
